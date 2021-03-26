@@ -1,0 +1,19 @@
+{
+  "name": "oc_03_animationscss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:project/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenBLR/OC_03_AnimationsCSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenBLR/OC_03_AnimationsCSS/issues"
+  },
+  "homepage": "https://github.com/StevenBLR/OC_03_AnimationsCSS#readme"
+}
