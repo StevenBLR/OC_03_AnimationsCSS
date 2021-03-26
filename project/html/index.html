@@ -7,18 +7,30 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="../project/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
     <header class="header">
-        <img class="header__logo" src="../project/imgs/ohmyfood@2x.svg" alt="logo reservia">
-        <!-- Localisation -->
+        <div class="header__logoArea">
+            <img class="header__logo" src="../imgs/ohmyfood@2x.svg" alt="logo ohmyfood">
+        </div>
     </header>
 
+    <form class="localisation">
+        <div class="localisation__inputArea">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <span class="localisation__input" role="textbox" contenteditable>Paris, Belleville</span>
+        </div>
+    </form>
+
     <section class="landing">
-        <!-- -->
+        <h2 class="landing__title">Réservez le menu qui vous convient</h2>
+        <p class="landing__subTitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button type="submit" class="gradientBt landing__button">
+            <span>Explorer nos restaurants</span>
+        </button>
     </section>
 
     <section class="steps">
@@ -29,6 +41,6 @@
 
     <footer class="footer">
     </footer>
-
+    <script src="https://kit.fontawesome.com/3dfad0cb79.js" crossorigin="anonymous"></script>
 </body>
 </html>
