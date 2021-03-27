@@ -2,8 +2,10 @@
 
 $greyBg: #eaeaea;
 $greyTxt: #353535;
+$grayIcons: #7f7f7f;
+$violet: #9356DC;
 $lightGreyBg:#f6f6f6;
-$titleFontSize: 4.5rem;
+$titleFontSize: 4.2rem;
 $subTitleFontSize: 3rem;
 
 /* General components --------------------------------------- */
@@ -17,7 +19,7 @@ $subTitleFontSize: 3rem;
     padding: 3rem;
     margin: 5rem;
     color: white;
-    border-radius: 4rem;
+    border-radius: 5rem;
     border: none;
     box-shadow: 3px 3px 11px -3px gray;
     /* Compatibilité gradient */
@@ -26,6 +28,12 @@ $subTitleFontSize: 3rem;
     background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
     background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
     background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
+}
+
+.title{
+    font-weight: 700;
+    padding: 4rem;
+    font-size: $titleFontSize;
 }
 
 /* ---------------------------------------------------------- */
@@ -45,6 +53,7 @@ $subTitleFontSize: 3rem;
         background-color: white;
         .header__logo{
             margin: 2rem;
+            margin-top: 3.5rem;
             height: 4rem;
         }
     }
@@ -54,7 +63,7 @@ $subTitleFontSize: 3rem;
     display : flex;
     justify-content: center;
     align-items: center;
-    height: 6rem;
+    height: 7rem;
     z-index: -1;
     font-family: Roboto;
     background-color: $greyBg;
@@ -101,18 +110,102 @@ $subTitleFontSize: 3rem;
 
     .landing__title{
         text-align: center;
-        font-weight: 700;
-        padding: 4rem;
-        font-size: $titleFontSize;
+        width: 75%;
     }
     .landing__subTitle{
         text-align: center;
         font-weight: 300;
         font-size: $subTitleFontSize;
     }
-    .landing__button{
-        
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+    height: 60rem;
+    margin: 0 0 5rem;
+    //background-color: coral;
+
+    .steps__title{
+        align-self: flex-start;
+        padding: 4rem 0 0 4rem;
     }
+    .steps__stepBox{
+        display: flex;
+        justify-content: row;
+        align-items: center;
+        box-sizing: border-box;
+        height: 12rem;
+        width: 85%;
+        border-radius: 3rem;
+        margin: 4rem 2rem 2rem 4rem;// Compensation bulletpoint
+        box-shadow: 3px 3px 11px -3px gray;
+        background-color: $lightGreyBg;
+    }
+        .steps__bulletPoint{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $violet;
+            border-radius: 4rem;
+            margin-left: -40px;
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+            .steps__bulletPoint p{
+                color: white;
+                font-weight: 300;
+                text-align: center;
+                font-size: 3rem;
+            }
+    .steps__stepBox i{
+        color: $grayIcons;
+        margin: 4rem;
+    }
+    .steps__bulletTxt{
+        text-align: left;
+        font-size: 2.5rem;
+        margin-right: 4rem;
+        flex: 1 1 auto;
+    }
+}
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+    background-color: cornflowerblue;
+
+    .restaurants__title{
+        align-self: flex-start;
+    }
+    .restaurants__card{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 90%;
+        margin: 2rem;
+        height: 38rem;
+    }
+        .restaurants__img{
+            border-radius: 3rem 3rem 0 0;
+            object-fit: cover;
+            width: 100%;
+            height: 70%;
+        }
+        .restaurants__infoArea{
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 0 0 3rem 3rem;
+            background-color: white;
+            font-size: 2rem;
+        }
+        .restaurants__like i{
+            position: absolute;
+        }
 }
 
 /* CSS Reset */
