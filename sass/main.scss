@@ -146,6 +146,7 @@ $subTitleFontSize: 3rem;
     }
         .steps__bulletPoint{
             display: flex;
+            flex-shrink: 0;
             justify-content: center;
             align-items: center;
             background-color: $violet;
