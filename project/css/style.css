@@ -247,8 +247,11 @@ h4 {
   width: 72%;
   margin: auto 0 auto 3rem;
 }
-.restaurants .restaurants__like i {
-  position: absolute;
+.restaurants .restaurants__like {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
