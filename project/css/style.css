@@ -19,6 +19,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: Roboto;
   vertical-align: baseline;
 }
 
@@ -56,7 +57,6 @@ table {
   width: fit-content;
   height: fit-content;
   font-size: 2.5rem;
-  font-family: Roboto;
   font-weight: 500;
   padding: 3rem;
   margin: 5rem;
@@ -73,9 +73,21 @@ table {
 }
 
 h2 {
+  font-size: 4.2rem;
   font-weight: 700;
   padding: 4rem;
-  font-size: 4.2rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 3rem;
 }
 
 /* ---------------------------------------------------------- */
@@ -108,7 +120,6 @@ h2 {
   align-items: center;
   height: 7rem;
   z-index: -1;
-  font-family: Roboto;
   background-color: #eaeaea;
 }
 .localisation .localisation__inputArea {
@@ -138,7 +149,6 @@ h2 {
   align-items: center;
   width: 100%;
   height: 45rem;
-  font-family: Roboto;
   background-color: #f6f6f6;
 }
 .landing .landing__title {
@@ -155,7 +165,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Roboto;
   height: 60rem;
   margin: 0 0 5rem;
 }
@@ -194,6 +203,7 @@ h2 {
 }
 .steps .steps__stepBox i {
   color: #7f7f7f;
+  width: 4rem;
   margin: 4rem;
 }
 .steps .steps__bulletTxt {
@@ -207,8 +217,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Roboto;
-  background-color: cornflowerblue;
+  background-color: #f6f6f6;
 }
 .restaurants .restaurants__title {
   align-self: flex-start;
@@ -230,10 +239,13 @@ h2 {
 .restaurants .restaurants__infoArea {
   flex: 1 1 auto;
   display: flex;
-  justify-content: space-around;
   border-radius: 0 0 3rem 3rem;
   background-color: white;
   font-size: 2rem;
+}
+.restaurants .restaurants__infos {
+  width: 72%;
+  margin: auto 0 auto 3rem;
 }
 .restaurants .restaurants__like i {
   position: absolute;

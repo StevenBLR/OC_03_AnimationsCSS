@@ -26,7 +26,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+    font: inherit;
+    font-family: Roboto;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -59,7 +60,6 @@ table {
     width: fit-content;
     height: fit-content;
     font-size: 2.5rem;
-    font-family: Roboto;
     font-weight: 500;
     padding: 3rem;
     margin: 5rem;
@@ -76,12 +76,22 @@ table {
 }
 
 h2{
+    font-size: $titleFontSize;
     font-weight: 700;
     padding: 4rem;
-    font-size: $titleFontSize;
 }
 
+h3{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
 
+h4{
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 3rem;
+}
 
 /* ---------------------------------------------------------- */
 
@@ -115,7 +125,6 @@ h2{
     align-items: center;
     height: 7rem;
     z-index: -1;
-    font-family: Roboto;
     background-color: $greyBg;
 
     .localisation__inputArea{
@@ -155,7 +164,6 @@ h2{
     align-items: center;
     width: 100%;
     height: 45rem;
-    font-family: Roboto;
     background-color: $lightGreyBg;
 
     .landing__title{
@@ -173,7 +181,6 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Roboto;
     height: 60rem;
     margin: 0 0 5rem;
     //background-color: coral;
@@ -213,6 +220,7 @@ h2{
             }
     .steps__stepBox i{
         color: $grayIcons;
+        width: 4rem;
         margin: 4rem;
     }
     .steps__bulletTxt{
@@ -226,8 +234,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Roboto;
-    background-color: cornflowerblue;
+    background-color: $lightGreyBg;
 
     .restaurants__title{
         align-self: flex-start;
@@ -249,11 +256,15 @@ h2{
         .restaurants__infoArea{
             flex: 1 1 auto;
             display: flex;
-            justify-content: space-around;
+            //justify-content: space-around;
             border-radius: 0 0 3rem 3rem;
             background-color: white;
             font-size: 2rem;
         }
+            .restaurants__infos{
+                width: 72%;
+                margin: auto 0 auto 3rem;
+            }
         .restaurants__like i{
             position: absolute;
         }
