@@ -123,6 +123,7 @@
 }
 .steps .steps__bulletPoint {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
