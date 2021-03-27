@@ -90,6 +90,15 @@ h4 {
   line-height: 3rem;
 }
 
+.sideTitleMargin, .restaurants .restaurants__title, .steps .steps__title {
+  align-self: flex-start;
+  padding: 7rem 0 3rem 4rem;
+}
+
+.hideElt {
+  display: none;
+}
+
 /* ---------------------------------------------------------- */
 .header {
   display: flex;
@@ -166,11 +175,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   height: 60rem;
-  margin: 0 0 5rem;
-}
-.steps .steps__title {
-  align-self: flex-start;
-  padding: 4rem 0 0 4rem;
+  margin: 0 0 10rem;
 }
 .steps .steps__stepBox {
   display: flex;
@@ -180,7 +185,7 @@ h4 {
   height: 12rem;
   width: 85%;
   border-radius: 3rem;
-  margin: 4rem 2rem 2rem 4rem;
+  margin: 2rem 2rem 2rem 4rem;
   box-shadow: 3px 3px 11px -3px gray;
   background-color: #f6f6f6;
 }
@@ -199,7 +204,7 @@ h4 {
   color: white;
   font-weight: 300;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 .steps .steps__stepBox i {
   color: #7f7f7f;
@@ -219,15 +224,12 @@ h4 {
   align-items: center;
   background-color: #f6f6f6;
 }
-.restaurants .restaurants__title {
-  align-self: flex-start;
-}
 .restaurants .restaurants__card {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   width: 90%;
-  margin: 2rem;
+  margin: 1.5rem;
   height: 38rem;
 }
 .restaurants .restaurants__img {
