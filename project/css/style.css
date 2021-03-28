@@ -223,6 +223,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   background-color: #f6f6f6;
+  /* Disabling filled heart */
 }
 .restaurants .restaurants__card {
   display: flex;
@@ -232,8 +233,14 @@ h4 {
   margin: 1.5rem;
   height: 38rem;
 }
+.restaurants .restaurants__newLabel {
+  background-color: aqua;
+  width: 5rem;
+  height: 2rem;
+}
 .restaurants .restaurants__img {
   border-radius: 3rem 3rem 0 0;
+  box-shadow: 3px 3px 11px -3px grey;
   object-fit: cover;
   width: 100%;
   height: 70%;
@@ -242,6 +249,7 @@ h4 {
   flex: 1 1 auto;
   display: flex;
   border-radius: 0 0 3rem 3rem;
+  box-shadow: 3px 3px 11px -3px grey;
   background-color: white;
   font-size: 2rem;
 }
@@ -252,8 +260,12 @@ h4 {
 .restaurants .restaurants__like {
   flex: 1 0 auto;
   display: flex;
+  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
+}
+.restaurants i[class*=fas] {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
