@@ -3,7 +3,9 @@
 $greyBg: #eaeaea;
 $greyTxt: #353535;
 $grayIcons: #7f7f7f;
-$violet: #9356DC;
+$primaryColor: #9356DC;
+$secondaryColor: #FF79DA;
+$tertiaryColor: #99E2D0;
 $lightGreyBg:#f6f6f6;
 $titleFontSize: 4.2rem;
 $subTitleFontSize: 3rem;
@@ -109,6 +111,7 @@ h4{
     display: flex;
     position: fixed;
     width: 100%;
+    z-index: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -215,7 +218,7 @@ h4{
             flex-shrink: 0;
             justify-content: center;
             align-items: center;
-            background-color: $violet;
+            background-color: $primaryColor;
             border-radius: 4rem;
             margin-left: -40px;
             height: 4.5rem;
@@ -243,6 +246,7 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10rem;
     background-color: $lightGreyBg;
 
     .restaurants__title{
@@ -251,15 +255,25 @@ h4{
     .restaurants__card{
         display: flex;
         flex-direction: column;
+        position: relative;
         box-sizing: border-box;
         width: 90%;
         margin: 1.5rem;
         height: 38rem;
     }
         .restaurants__newLabel{
-            background-color: aqua;
-            width: 5rem;
-            height: 2rem;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: darken($tertiaryColor,40%);
+            font-size: 2.3rem;
+            top: 0;
+            right: 0;
+            margin: 2rem;
+            width: 14rem;
+            height: 5rem;
+            background-color: $tertiaryColor;
         }
         .restaurants__img{
             border-radius: 3rem 3rem 0 0;
@@ -294,3 +308,8 @@ h4{
             }
 }
 
+footer{
+    background-color: $greyTxt;
+    height: 30rem;
+    width: 100%;
+}
