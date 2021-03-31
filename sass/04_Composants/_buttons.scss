@@ -1,0 +1,22 @@
+.gradientBt{
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 3rem;
+    margin: 5rem;
+    color: white;
+    border-radius: 5rem;
+    border: none;
+    box-shadow: 3px 3px 11px -3px gray;
+    /* Compatibilité gradient */
+    background-image: -webkit-linear-gradient(276deg, #FF79DA, #9356DC);
+    background-image: -moz-linear-gradient(276deg, #FF79DA, #9356DC);
+    background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
+    background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
+    background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
+}
+
+.like{
+    color: $primaryColor;
+}

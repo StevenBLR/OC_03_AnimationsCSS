@@ -1,0 +1,82 @@
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+    background-color: $lightGreyBg;
+
+    .restaurants__title{
+        @extend .sideTitleMargin;
+    }
+    .restaurants__card{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-sizing: border-box;
+        color: black;
+        width: 90%;
+        margin: 1.5rem;
+        height: 38rem;
+    }
+        .restaurants__newLabel{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: darken($tertiaryColor,40%);
+            font-size: 2.3rem;
+            top: 0;
+            right: 0;
+            margin: 2rem;
+            width: 14rem;
+            height: 5rem;
+            background-color: $tertiaryColor;
+        }
+        .restaurants__img{
+            border-radius: 3rem 3rem 0 0;
+            box-shadow: 3px 3px 11px -3px grey;
+            object-fit: cover;
+            width: 100%;
+            height: 70%;
+        }
+        .restaurants__infoArea{
+            flex: 1 1 auto;
+            display: flex;
+            //justify-content: space-around;
+            border-radius: 0 0 3rem 3rem;
+            box-shadow: 3px 3px 11px -3px grey;
+            background-color: white;
+            font-size: 2rem;
+        }
+            .restaurants__infos{
+                flex: 1 1 auto;
+                margin: auto 0 auto 3rem;
+            }
+            .restaurants__like{
+                width: 12rem;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .likeSwitch{
+                    color: aquamarine;
+                    position: absolute;
+                    height: 100%;
+                    z-index: 1;
+                    width: 100%;
+                    opacity: 0.0;
+                    //visibility: hidden; // is Disabling toggle //
+                    &:checked ~ .like{
+                        display: block;
+                    }
+                    &:checked ~ :not(.like){
+                        display: none;
+                    }
+                }
+                
+            }
+            /* Disabling filled heart */
+            i[class*="fas"]{
+                display: none;
+            }
+}

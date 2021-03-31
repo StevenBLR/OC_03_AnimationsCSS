@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header__logoArea{
+        width: 100%;
+        justify-self: stretch;
+        display: flex;
+        justify-content: center;
+        box-shadow: 3px 3px 11px -3px gray;
+        background-color: white;
+        .header__logo{
+            margin: 2rem;
+            margin-top: 3.5rem;
+            height: 4rem;
+        }
+    }
+}

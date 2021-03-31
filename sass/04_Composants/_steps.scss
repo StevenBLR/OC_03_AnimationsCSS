@@ -1,0 +1,52 @@
+.steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60rem;
+    margin: 0 0 10rem;
+
+    .steps__title{
+        @extend .sideTitleMargin;
+    }
+    .steps__stepBox{
+        display: flex;
+        justify-content: row;
+        align-items: center;
+        box-sizing: border-box;
+        height: 12rem;
+        width: 85%;
+        border-radius: 3rem;
+        margin: 2rem 2rem 2rem 4rem;// Compensation bulletpoint
+        box-shadow: 3px 3px 11px -3px gray;
+        background-color: $lightGreyBg;
+    }
+        .steps__bulletPoint{
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: $primaryColor;
+            border-radius: 4rem;
+            margin-left: -40px;
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+            .steps__bulletPoint p{
+                color: white;
+                font-weight: 300;
+                text-align: center;
+                font-size: 2.3rem;
+            }
+    .steps__stepBox i{
+        color: $grayIcons;
+        width: 4rem;
+        margin: 4rem;
+    }
+    .steps__bulletTxt{
+        text-align: left;
+        font-size: 2.5rem;
+        margin-right: 4rem;
+        flex: 1 1 auto;
+        color: black;
+    }
+}

@@ -1,0 +1,37 @@
+@import "../02_Utils/variables";
+.localisation{
+    display : flex;
+    justify-content: center;
+    padding-top: 10rem;
+    align-items: center;
+    height: 7rem;
+    z-index: -1;
+    background-color: $greyBg;
+
+    .localisation__inputArea{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .localisation i{
+            margin: 2rem;
+        }
+        .localisation__input{
+            padding: 1px 6px;
+            margin: 1rem;
+            font-size: 2.5rem;
+            color: $greyTxt;
+            outline: none;
+    
+            &::placeholder {    // Reference a l'element courant avec "&" ( localisation__input )
+                font-size: 2rem;
+                color: $greyTxt;
+            }
+            /* Bordure a la selection
+            &:focus{
+                border: 1px solid;
+            }
+            */
+        }
+    }
+}
