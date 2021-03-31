@@ -99,6 +99,10 @@ h4 {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ---------------------------------------------------------- */
 .header {
   display: flex;
@@ -217,6 +221,7 @@ h4 {
   font-size: 2.5rem;
   margin-right: 4rem;
   flex: 1 1 auto;
+  color: black;
 }
 
 .restaurants {
@@ -232,6 +237,7 @@ h4 {
   flex-direction: column;
   position: relative;
   box-sizing: border-box;
+  color: black;
   width: 90%;
   margin: 1.5rem;
   height: 38rem;
@@ -281,9 +287,26 @@ h4 {
 }
 
 footer {
-  background-color: #353535;
+  box-sizing: border-box;
+  padding: 2rem;
   height: 30rem;
   width: 100%;
+  background-color: #353535;
+}
+footer .footer__logo {
+  height: 2.5rem;
+  margin: 2rem 1rem 1rem 2rem;
+}
+footer .footer__link {
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  align-items: center;
+  margin: 2rem;
+  color: white;
+}
+footer .footer__link i {
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
