@@ -1,5 +1,6 @@
 .landing{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -15,5 +16,16 @@
         text-align: center;
         font-weight: 300;
         font-size: $subTitleFontSize;
+    }
+    
+}
+
+.landing--menu{
+    @extend .landing;
+    padding-top: 7rem;
+    .landing__img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
 }
