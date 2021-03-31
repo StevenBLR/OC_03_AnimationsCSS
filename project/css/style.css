@@ -103,6 +103,10 @@ a {
   text-decoration: none;
 }
 
+.like {
+  color: #9356DC;
+}
+
 /* ---------------------------------------------------------- */
 .header {
   display: flex;
@@ -272,15 +276,29 @@ a {
   font-size: 2rem;
 }
 .restaurants .restaurants__infos {
-  width: 72%;
+  flex: 1 1 auto;
   margin: auto 0 auto 3rem;
 }
 .restaurants .restaurants__like {
-  flex: 1 0 auto;
+  width: 12rem;
+  position: relative;
   display: flex;
-  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
+}
+.restaurants .restaurants__like .likeSwitch {
+  color: aquamarine;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+}
+.restaurants .restaurants__like .likeSwitch:checked ~ .like {
+  display: block;
+}
+.restaurants .restaurants__like .likeSwitch:checked ~ :not(.like) {
+  display: none;
 }
 .restaurants i[class*=fas] {
   display: none;

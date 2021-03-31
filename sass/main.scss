@@ -111,6 +111,10 @@ a{
     text-decoration: none;
 }
 
+.like{
+    color: $primaryColor;
+}
+
 /* ---------------------------------------------------------- */
 
 .header{
@@ -299,15 +303,31 @@ a{
             font-size: 2rem;
         }
             .restaurants__infos{
-                width: 72%;
+                flex: 1 1 auto;
                 margin: auto 0 auto 3rem;
             }
             .restaurants__like{
-                flex: 1 0 auto;
+                width: 12rem;
+                position: relative;
                 display: flex;
-                flex: 1 1 auto;
                 justify-content: center;
                 align-items: center;
+                .likeSwitch{
+                    color: aquamarine;
+                    position: absolute;
+                    height: 100%;
+                    z-index: 1;
+                    width: 100%;
+                    opacity: 0.0;
+                    //visibility: hidden; // is Disabling toggle //
+                    &:checked ~ .like{
+                        display: block;
+                    }
+                    &:checked ~ :not(.like){
+                        display: none;
+                    }
+                }
+                
             }
             /* Disabling filled heart */
             i[class*="fas"]{
