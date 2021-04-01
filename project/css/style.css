@@ -132,12 +132,16 @@ footer .footer__link i {
   height: 120rem;
 }
 .menu .menu__header {
-  top: -10rem;
+  top: -9.8rem;
   height: 10rem;
   width: 100%;
   position: absolute;
   background-color: #f6f6f6;
   border-radius: 8rem 8rem 0 0;
+}
+.menu .menu__header h1 {
+  margin: 7rem 0 0rem 5rem;
+  font-size: 4.5rem;
 }
 
 .localisation {
