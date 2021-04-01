@@ -92,6 +92,7 @@ h4 {
 .header .header__logoArea {
   width: 100%;
   justify-self: stretch;
+  position: relative;
   display: flex;
   justify-content: center;
   box-shadow: 3px 3px 11px -3px gray;
@@ -143,6 +144,17 @@ footer .footer__link i {
   background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
+}
+
+.backBt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 10rem;
+  left: 0;
+  color: black;
 }
 
 .menu {
@@ -308,6 +320,17 @@ footer .footer__link i {
   background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
+}
+
+.backBt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 10rem;
+  left: 0;
+  color: black;
 }
 
 .landing, .landing--menu {

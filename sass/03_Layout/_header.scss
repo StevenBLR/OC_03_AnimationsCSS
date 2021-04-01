@@ -10,6 +10,7 @@
     .header__logoArea{
         width: 100%;
         justify-self: stretch;
+        position: relative;
         display: flex;
         justify-content: center;
         box-shadow: 3px 3px 11px -3px gray;
@@ -19,5 +20,6 @@
             margin-top: 3.5rem;
             height: 4rem;
         }
+        
     }
 }
