@@ -8,6 +8,8 @@
     .restaurants__title{
         @extend .sideTitleMargin;
     }
+
+    
     .restaurants__card{
         display: flex;
         flex-direction: column;
@@ -53,27 +55,7 @@
                 margin: auto 0 auto 3rem;
             }
             .restaurants__like{
-                width: 12rem;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .likeSwitch{
-                    color: aquamarine;
-                    position: absolute;
-                    height: 100%;
-                    z-index: 1;
-                    width: 100%;
-                    opacity: 0.0;
-                    //visibility: hidden; // is Disabling toggle //
-                    &:checked ~ .like{
-                        display: block;
-                    }
-                    &:checked ~ :not(.like){
-                        display: none;
-                    }
-                }
-                
+                @include likeBt();
             }
             /* Disabling filled heart */
             i[class*="fas"]{

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* CSS Reset */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -125,6 +126,25 @@ footer .footer__link i {
   margin-right: 1rem;
 }
 
+.gradientBt {
+  width: fit-content;
+  height: fit-content;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 3rem;
+  margin: 5rem;
+  color: white;
+  border-radius: 5rem;
+  border: none;
+  box-shadow: 3px 3px 11px -3px gray;
+  /* Compatibilité gradient */
+  background-image: -webkit-linear-gradient(276deg, #FF79DA, #9356DC);
+  background-image: -moz-linear-gradient(276deg, #FF79DA, #9356DC);
+  background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
+  background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
+  background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
+}
+
 .menu {
   position: relative;
   background-color: #f6f6f6;
@@ -132,6 +152,9 @@ footer .footer__link i {
   height: 120rem;
 }
 .menu .menu__header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   top: -9.8rem;
   height: 10rem;
   width: 100%;
@@ -142,6 +165,33 @@ footer .footer__link i {
 .menu .menu__header h1 {
   margin: 7rem 0 0rem 5rem;
   font-size: 4.5rem;
+  font-family: Shrikhand;
+}
+.menu .menu__header .menu__like {
+  width: 12rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu__header .menu__like .like {
+  color: #9356DC;
+}
+.menu .menu__header .menu__like .likeSwitch {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  opacity: 0;
+}
+.menu .menu__header .menu__like .likeSwitch:checked ~ .like {
+  display: block;
+}
+.menu .menu__header .menu__like .likeSwitch:checked ~ :not(.like) {
+  display: none;
+}
+.menu .menu__header .menu__like .likeSwitch:not(:checked) ~ .like {
+  display: none;
 }
 
 .localisation {
@@ -195,10 +245,6 @@ footer .footer__link i {
   background-image: -ms-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -o-linear-gradient(276deg, #FF79DA, #9356DC);
   background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
-}
-
-.like {
-  color: #9356DC;
 }
 
 .landing, .landing--menu {
@@ -337,8 +383,10 @@ footer .footer__link i {
   justify-content: center;
   align-items: center;
 }
+.restaurants .restaurants__like .like {
+  color: #9356DC;
+}
 .restaurants .restaurants__like .likeSwitch {
-  color: aquamarine;
   position: absolute;
   height: 100%;
   z-index: 1;
@@ -349,6 +397,9 @@ footer .footer__link i {
   display: block;
 }
 .restaurants .restaurants__like .likeSwitch:checked ~ :not(.like) {
+  display: none;
+}
+.restaurants .restaurants__like .likeSwitch:not(:checked) ~ .like {
   display: none;
 }
 .restaurants i[class*=fas] {

@@ -17,6 +17,32 @@
     background-image: -webkit-gradient(276deg, #FF79DA, #9356DC);
 }
 
-.like{
-    color: $primaryColor;
+@mixin likeBt {
+    width: 12rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .like{
+        color: $primaryColor;
+    }
+    .likeSwitch{
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+        width: 100%;
+        opacity: 0.0;
+        //visibility: hidden; // is Disabling toggle //
+        &:checked ~ .like{
+            display: block;
+        }
+        &:checked ~ :not(.like){
+            display: none;
+        }
+        &:not(:checked) ~ .like{
+            display: none;
+        }
+        
+    } 
 }
+
