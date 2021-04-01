@@ -13,7 +13,7 @@
         top: -9.8rem;
         height: 10rem;
         width: 100%;
-        position: absolute;
+        position: relative;
         background-color: $lightGreyBg;
         border-radius: 8rem 8rem 0 0;
 
@@ -24,6 +24,10 @@
         }
         .menu__like{
             @include likeBt();
+            bottom: 0.5em;
+            .fa-2x {
+                font-size: 4em;
+            }
         }
     }
 }

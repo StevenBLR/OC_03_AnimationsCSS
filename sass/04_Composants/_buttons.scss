@@ -34,15 +34,12 @@
         opacity: 0.0;
         //visibility: hidden; // is Disabling toggle //
         &:checked ~ .like{
-            display: block;
-        }
-        &:checked ~ :not(.like){
-            display: none;
+            font-weight: 600;
         }
         &:not(:checked) ~ .like{
-            display: none;
+            font-weight: 400;
+            color:black;
         }
-        
     } 
 }
 

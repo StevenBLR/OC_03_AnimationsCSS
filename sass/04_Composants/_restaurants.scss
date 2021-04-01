@@ -57,8 +57,4 @@
             .restaurants__like{
                 @include likeBt();
             }
-            /* Disabling filled heart */
-            i[class*="fas"]{
-                display: none;
-            }
 }
