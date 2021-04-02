@@ -162,6 +162,7 @@ footer .footer__link i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 9rem;
   background-color: #f6f6f6;
 }
 .menu .menu__header {
@@ -178,6 +179,7 @@ footer .footer__link i {
 .menu .menu__header h1 {
   margin: 7rem 0 0rem 5rem;
   font-size: 4.5rem;
+  flex: 1 1 auto;
   font-family: Shrikhand;
 }
 .menu .menu__header .menu__like {
@@ -186,6 +188,8 @@ footer .footer__link i {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  width: 9rem;
   bottom: 0.5em;
 }
 .menu .menu__header .menu__like .like {
@@ -294,6 +298,8 @@ footer .footer__link i {
 }
 .menu .gradientBt {
   padding: 3rem 8rem 3rem 8rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .localisation {
