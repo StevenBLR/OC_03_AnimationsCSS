@@ -242,32 +242,31 @@ footer .footer__link i {
   width: 5em;
 }
 .menu .menu__board .menu__meal .menu__selected {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 9rem;
-  color: white;
+  height: 100%;
+  background-color: #99E2D0;
 }
 .menu .menu__board .menu__meal .menu__selected i {
-  position: absolute;
-  z-index: 1;
-}
-.menu .menu__board .menu__meal .menu__selected::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 11rem;
-  right: -2rem;
-  border-radius: 0 2rem 2rem 0;
-  background-color: #99E2D0;
+  margin: 2rem;
 }
 .menu .menu__board .menu__meal h4 {
   font-size: 2.4em;
 }
 .menu .menu__board .menu__meal p {
   font-size: 2.4rem;
+}
+.menu .menu__board .menu__meal::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 100%;
+  border-radius: 0 2rem 2rem 0;
 }
 
 .localisation {
