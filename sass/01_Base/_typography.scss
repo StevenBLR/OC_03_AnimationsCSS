@@ -19,3 +19,9 @@ h4{
     font-weight: 300;
     line-height: 3rem;
 }
+
+@mixin truncatedTxt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
