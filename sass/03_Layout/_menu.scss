@@ -76,11 +76,26 @@
                 height: 100%;
                 background-color: $tertiaryColor;
                 i{
+<<<<<<< HEAD
                     margin: 2rem;
+=======
+                    z-index: 1;
+                }
+                &::after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 11rem;
+                    right: -2rem;
+                    border-radius: 0 2rem 2rem 0;
+                    background-color: #99E2D0;
+>>>>>>> parent of ae0e84d (Layout setup for meal hover aniv V1)
                 }
             }
             h4{
                 font-size: 2.4em;
+                
             }
             p{
                 font-size:2.4rem;
