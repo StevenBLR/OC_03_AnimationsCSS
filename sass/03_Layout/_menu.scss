@@ -73,6 +73,7 @@
                 width: 9rem;
                 color: white;
                 i{
+                    position: absolute;
                     z-index: 1;
                 }
                 &::after{
@@ -88,7 +89,6 @@
             }
             h4{
                 font-size: 2.4em;
-                
             }
             p{
                 font-size:2.4rem;

@@ -250,6 +250,7 @@ footer .footer__link i {
   color: white;
 }
 .menu .menu__board .menu__meal .menu__selected i {
+  position: absolute;
   z-index: 1;
 }
 .menu .menu__board .menu__meal .menu__selected::after {
