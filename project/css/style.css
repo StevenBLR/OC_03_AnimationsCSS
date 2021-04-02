@@ -431,6 +431,12 @@ footer .footer__link i {
   text-align: center;
   font-size: 2.3rem;
 }
+.steps .selected {
+  background-color: #f2eafb;
+}
+.steps .selected i {
+  color: white;
+}
 .steps .steps__stepBox i {
   color: #7f7f7f;
   width: 4rem;
