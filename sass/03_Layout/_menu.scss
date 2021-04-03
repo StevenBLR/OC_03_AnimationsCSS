@@ -1,5 +1,15 @@
 @import "../04_Composants/buttons";
 
+@mixin staggerAnim($nb) {
+    $elements:$nb;
+    @for $i from 0 to $elements {
+        &:nth-child(#{$i + 1}) {
+            background: rgb($i*30, $i*20, $i*30);
+            animation-delay: 500ms * ($i - 1);
+            transform: translate(0,-1rem);
+        }
+    }
+}
 .menu{
     position: relative;
     display: flex;
@@ -45,12 +55,6 @@
         width: 100%;
         top: -10rem;
 
-        @each $menuItem in menu__board{
-            .#{$menuItem}{
-                background-color: blue;
-            }
-        }
-
         h2{
             font-size: 2.8rem;
             font-weight: 300;
@@ -79,6 +83,23 @@
         }
         .menu__meal{
             /* Animation */
+            //opacity: 0;
+            animation: fade-in 330ms ease forwards;
+            transition: transform 800ms ease-out;
+            // &:hover{
+            //     transform: translateY(2rem);
+            // }
+            @include staggerAnim(12);
+            
+            
+
+            // $elements:12;
+            // @for $i from 0 to $elements {
+            //     &:nth-child(#{$i + 1}) {
+            //         background: rgb($i*10, $i*10, $i*10);
+            //         @debug "VALUE: #{nth-child($i)}";
+            //     }
+            // }
                 // opacity: 0;
                 // animation: fade-in 300ms ease forwards;
               
@@ -137,5 +158,7 @@
         bottom: 0;
     }
 }
+
+
 
 

@@ -221,9 +221,6 @@ footer .footer__link i {
   width: 100%;
   top: -10rem;
 }
-.menu .menu__board .menu__board {
-  background-color: blue;
-}
 .menu .menu__board h2 {
   font-size: 2.8rem;
   font-weight: 300;
@@ -258,6 +255,8 @@ footer .footer__link i {
 }
 .menu .menu__board .menu__meal {
   /* Animation */
+  animation: fade-in 330ms ease forwards;
+  transition: transform 800ms ease-out;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -266,6 +265,66 @@ footer .footer__link i {
   border-radius: 3em;
   box-shadow: 3px 3px 11px -3px gray;
   background-color: white;
+}
+.menu .menu__board .menu__meal:nth-child(1) {
+  background: black;
+  animation-delay: -500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(2) {
+  background: #1e141e;
+  animation-delay: 0ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(3) {
+  background: #3c283c;
+  animation-delay: 500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(4) {
+  background: #5a3c5a;
+  animation-delay: 1000ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(5) {
+  background: #785078;
+  animation-delay: 1500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(6) {
+  background: #966496;
+  animation-delay: 2000ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(7) {
+  background: #b478b4;
+  animation-delay: 2500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(8) {
+  background: #d28cd2;
+  animation-delay: 3000ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(9) {
+  background: #f0a0f0;
+  animation-delay: 3500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(10) {
+  background: #ffb4ff;
+  animation-delay: 4000ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(11) {
+  background: #ffc8ff;
+  animation-delay: 4500ms;
+  transform: translate(0, -1rem);
+}
+.menu .menu__board .menu__meal:nth-child(12) {
+  background: #ffdcff;
+  animation-delay: 5000ms;
+  transform: translate(0, -1rem);
 }
 .menu .menu__board .menu__meal .menu__info {
   flex: 1 1 auto;
