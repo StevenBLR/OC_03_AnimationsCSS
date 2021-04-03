@@ -28,6 +28,8 @@
         .menu__like{
             @include likeBt();
             justify-content: flex-start;
+            align-items: flex-end;
+            height: 100%;
             width: 9rem;
             bottom: 0.5em;
             .fa-2x {
@@ -42,8 +44,14 @@
         position: relative;
         width: 100%;
         top: -10rem;
+
+        @each $menuItem in menu__board{
+            .#{$menuItem}{
+                background-color: blue;
+            }
+        }
+
         h2{
-            content: "toto zeeer";
             font-size: 2.8rem;
             font-weight: 300;
             padding: unset;
@@ -70,9 +78,17 @@
             @include truncatedTxt;
         }
         .menu__meal{
+            /* Animation */
+                // opacity: 0;
+                // animation: fade-in 300ms ease forwards;
+              
+                // @for $x from 2 through $n {
+                //   &:nth-child(#{$x}) {
+                //     animation-delay: 100ms * ($x - 1);
+                //   }
+                // }
             display: flex;
             flex-direction: row;
-            
             position: relative;
             margin: 1rem 2rem 1rem 2rem;
             padding: 2em;
@@ -121,3 +137,5 @@
         bottom: 0;
     }
 }
+
+

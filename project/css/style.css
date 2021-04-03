@@ -189,6 +189,8 @@ footer .footer__link i {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
   width: 9rem;
   bottom: 0.5em;
 }
@@ -219,8 +221,10 @@ footer .footer__link i {
   width: 100%;
   top: -10rem;
 }
+.menu .menu__board .menu__board {
+  background-color: blue;
+}
 .menu .menu__board h2 {
-  content: "toto zeeer";
   font-size: 2.8rem;
   font-weight: 300;
   padding: unset;
@@ -253,6 +257,7 @@ footer .footer__link i {
   text-overflow: ellipsis;
 }
 .menu .menu__board .menu__meal {
+  /* Animation */
   display: flex;
   flex-direction: row;
   position: relative;
