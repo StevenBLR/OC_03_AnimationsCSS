@@ -2,12 +2,17 @@
 
 @mixin staggerAnim($nb) {
     $elements:$nb;
+    $delay:0.5;
     @for $i from 0 to $elements {
         &:nth-child(#{$i + 1}) {
-            background: rgb($i*30, $i*20, $i*30);
-            animation-delay: 500ms * ($i - 1);
-            transform: translate(0,-1rem);
+            //background: rgb($i*30, $i*20, $i*30);
+            transition-delay: 1s;
+            transform: translateY(-5rem);
+            transition-delay: $i * 0.05s;
+            //opacity: 0;
         }
+        transition: transform 1000ms cubic-bezier(.17,.67,.33,.99);
+        animation: fade-in 330ms ease forwards;
     }
 }
 .menu{
@@ -84,8 +89,7 @@
         .menu__meal{
             /* Animation */
             //opacity: 0;
-            animation: fade-in 330ms ease forwards;
-            transition: transform 800ms ease-out;
+            
             // &:hover{
             //     transform: translateY(2rem);
             // }
@@ -113,6 +117,7 @@
             position: relative;
             margin: 1rem 2rem 1rem 2rem;
             padding: 2em;
+            bottom: -5rem;
             border-radius: 3em;
             box-shadow: 3px 3px 11px -3px gray;
             background-color: white;
