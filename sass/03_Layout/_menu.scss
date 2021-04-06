@@ -6,13 +6,26 @@
     @for $i from 0 to $elements {
         &:nth-child(#{$i + 1}) {
             //background: rgb($i*30, $i*20, $i*30);
-            transition-delay: 1s;
-            transform: translateY(-5rem);
-            transition-delay: $i * 0.05s;
-            //opacity: 0;
+            // transition-delay: 1s;
+            // transform: translateY(-5rem);
+            // transition-delay: $i * 0.05s;
+            animation: staggerTranslation 1000ms cubic-bezier(.17,.67,.33,.99) $i * 0.10s forwards;
         }
-        transition: transform 1000ms cubic-bezier(.17,.67,.33,.99);
-        animation: fade-in 330ms ease forwards;
+        //transition: transform 1000ms cubic-bezier(.17,.67,.33,.99);
+        //animation: fade-in 330ms ease forwards;
+    }
+
+    
+}
+
+@keyframes staggerTranslation {
+    0%{
+        opacity: 0;
+        transform: translateY(5rem)
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
     }
 }
 .menu{
@@ -88,7 +101,7 @@
         }
         .menu__meal{
             /* Animation */
-            //opacity: 0;
+            opacity: 0;
             
             // &:hover{
             //     transform: translateY(2rem);
@@ -117,7 +130,7 @@
             position: relative;
             margin: 1rem 2rem 1rem 2rem;
             padding: 2em;
-            bottom: -5rem;
+            // bottom: -5rem;
             border-radius: 3em;
             box-shadow: 3px 3px 11px -3px gray;
             background-color: white;
