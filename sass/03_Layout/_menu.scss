@@ -1,33 +1,6 @@
 @import "../04_Composants/buttons";
+@import "../04_Composants/animations";
 
-@mixin staggerAnim($nb) {
-    $elements:$nb;
-    $delay:0.5;
-    @for $i from 0 to $elements {
-        &:nth-child(#{$i + 1}) {
-            //background: rgb($i*30, $i*20, $i*30);
-            // transition-delay: 1s;
-            // transform: translateY(-5rem);
-            // transition-delay: $i * 0.05s;
-            animation: staggerTranslation 1000ms cubic-bezier(.17,.67,.33,.99) $i * 0.10s forwards;
-        }
-        //transition: transform 1000ms cubic-bezier(.17,.67,.33,.99);
-        //animation: fade-in 330ms ease forwards;
-    }
-
-    
-}
-
-@keyframes staggerTranslation {
-    0%{
-        opacity: 0;
-        transform: translateY(5rem)
-    }
-    100%{
-        opacity: 100%;
-        transform: translateY(0);
-    }
-}
 .menu{
     position: relative;
     display: flex;
@@ -102,35 +75,13 @@
         .menu__meal{
             /* Animation */
             opacity: 0;
-            
-            // &:hover{
-            //     transform: translateY(2rem);
-            // }
             @include staggerAnim(12);
-            
-            
 
-            // $elements:12;
-            // @for $i from 0 to $elements {
-            //     &:nth-child(#{$i + 1}) {
-            //         background: rgb($i*10, $i*10, $i*10);
-            //         @debug "VALUE: #{nth-child($i)}";
-            //     }
-            // }
-                // opacity: 0;
-                // animation: fade-in 300ms ease forwards;
-              
-                // @for $x from 2 through $n {
-                //   &:nth-child(#{$x}) {
-                //     animation-delay: 100ms * ($x - 1);
-                //   }
-                // }
             display: flex;
             flex-direction: row;
             position: relative;
             margin: 1rem 2rem 1rem 2rem;
             padding: 2em;
-            // bottom: -5rem;
             border-radius: 3em;
             box-shadow: 3px 3px 11px -3px gray;
             background-color: white;
