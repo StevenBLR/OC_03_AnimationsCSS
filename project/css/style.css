@@ -157,6 +157,19 @@ footer .footer__link i {
   color: black;
 }
 
+/*
+@mixin confirmBtAnim(){
+
+    @keyframes revealBtAnim {
+        0%{
+            width: 10%;
+        }
+        100%{
+            width: 35%;
+        }
+    }
+}
+*/
 .menu {
   position: relative;
   display: flex;
@@ -261,6 +274,7 @@ footer .footer__link i {
   position: relative;
   margin: 1rem 2rem 1rem 2rem;
   padding: 2em;
+  overflow: hidden;
   border-radius: 3em;
   box-shadow: 3px 3px 11px -3px gray;
   background-color: white;
@@ -326,24 +340,34 @@ footer .footer__link i {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 9rem;
-  color: white;
+  width: 0;
   border-radius: 0 2rem 2rem 0;
-  background-color: pink;
+  transition: 0.35s cubic-bezier(0.5, 0.01, 0.55, 1);
 }
-.menu .menu__board .menu__meal .menu__selected i {
+.menu .menu__board .menu__meal .restaurant__mealBt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  width: 10%;
+  z-index: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -12%;
+  color: white;
+  transition: 0.35s cubic-bezier(0.5, 0.01, 0.55, 1);
+  background-color: #99E2D0;
+}
+.menu .menu__board .menu__meal .restaurant__mealBt i {
   z-index: 1;
 }
-.menu .menu__board .menu__meal .menu__selected::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 11rem;
-  right: -2em;
-  border-radius: 0 3rem 3rem 0;
-  background-color: #99E2D0;
-  opacity: 0.5;
+.menu .menu__board .menu__meal:hover .restaurant__mealBt {
+  width: 22%;
+  transform: translate(-6.5rem, 0);
+}
+.menu .menu__board .menu__meal:hover .menu__selected {
+  width: 22%;
 }
 .menu .gradientBt {
   padding: 3rem 8rem 3rem 8rem;
