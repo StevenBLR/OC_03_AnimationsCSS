@@ -100,7 +100,7 @@
                 height: 100%;
                 width: 5em;
             }
-            .menu__selected{
+            .menu__offset{
                 display: flex;
                 position: relative;
                 justify-content: center;
@@ -136,7 +136,7 @@
                 transform: translate(-6.5rem, 0);
             }
 
-            &:hover .menu__selected{
+            &:hover .menu__offset{
                 width: 22%;
             }
             &:hover .restaurant__mealBt i{

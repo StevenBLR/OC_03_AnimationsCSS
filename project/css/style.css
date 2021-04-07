@@ -346,7 +346,7 @@ footer .footer__link i {
   height: 100%;
   width: 5em;
 }
-.menu .menu__board .menu__meal .menu__selected {
+.menu .menu__board .menu__meal .menu__offset {
   display: flex;
   position: relative;
   justify-content: center;
@@ -377,7 +377,7 @@ footer .footer__link i {
   width: 22%;
   transform: translate(-6.5rem, 0);
 }
-.menu .menu__board .menu__meal:hover .menu__selected {
+.menu .menu__board .menu__meal:hover .menu__offset {
   width: 22%;
 }
 .menu .menu__board .menu__meal:hover .restaurant__mealBt i {
