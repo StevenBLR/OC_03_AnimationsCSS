@@ -88,7 +88,10 @@
             background-color: white;
 
             .menu__info{
-                flex:1 1 auto;
+                flex: 1 1 auto;
+                text-overflow: ellipsis;
+                width: 100px;
+                overflow: hidden;
             }
             .menu__price{
                 align-self: flex-end;
@@ -110,19 +113,18 @@
                 
             }
             .restaurant__mealBt{
+                width: 10%;
+                transition: .35s cubic-bezier(.5,.01,.55,1);
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 content: "";
-                width: 10%;
                 z-index: 0;
                 height: 100%;
                 position: absolute;
                 top: 0;
                 right: -12%;
                 color: white;
-                transition: .35s cubic-bezier(.5,.01,.55,1);
-                //opacity: 0.5;
                 background-color: #99E2D0;
                 i{
                     z-index: 1;
@@ -135,9 +137,11 @@
             }
 
             &:hover .menu__selected{
-                //width: 12rem;
                 width: 22%;
             }
+            &:hover .restaurant__mealBt i{
+                animation: rotationAnim .42s ease-in-out;
+            } 
             
         }
     }

@@ -3,13 +3,13 @@
     $delay:0.5;
     @for $i from 0 to $elements {
         &:nth-child(#{$i + 1}) {
-            animation: staggerTranslation 1500ms cubic-bezier(.17,.67,.33,.99) $i * 0.10s forwards;
+            animation: staggerAnimation 1500ms cubic-bezier(.17,.67,.33,.99) $i * 0.10s forwards;
         }
     }
-    @keyframes staggerTranslation {
+    @keyframes staggerAnimation {
         0%{
             opacity: 0;
-            transform: translateY(5rem)
+            transform: translateY(5rem);
         }
         100%{
             opacity: 100%;
@@ -17,6 +17,16 @@
         }
     }
 }
+
+@keyframes rotationAnim {
+    0%{
+        transform: rotate(0);
+    }    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 /*
 @mixin confirmBtAnim(){
 
