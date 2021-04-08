@@ -31,6 +31,8 @@
             @debug "last";
         }
     }
+    
+/*#region Loading spinner anim */
     @keyframes loadingDots {
         0%{
             // Init
@@ -93,22 +95,21 @@
             z-index: -1;
         }
     }
-    // @for $i from 0 to $nbDots+1{
-    //     // First dot
-    //     @if $i == 0{
-    //         &:nth-child(#{$i+1}){
-    //             @debug "First item";
-    //         }
-    //     }
-    //     // Last dot
-    //     @else if $i == $nbDots{
-    //         @debug "Last item";
-    //     }
-    //     // In between dots
-    //     @else{
-    //         @debug "Middle item";
-    //     }
-    // }
+/*#endregion*/
+}
+
+@mixin logoHideOut() {
+    //animation-delay: 5s;
+    //animation: logoHideOut 1.5s cubic-bezier(.17,.67,.33,.99) 1s backwards;
+    animation: logoHideOut 1.5s cubic-bezier(0,.45,0,1.32) .5s backwards;
+    @keyframes logoHideOut {
+        0%{
+            transform: translateY(100px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
 }
 
 @keyframes rotationAnim {
@@ -119,3 +120,4 @@
         transform: rotate(360deg);
     }
 }
+
