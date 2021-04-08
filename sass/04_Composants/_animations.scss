@@ -18,6 +18,99 @@
     }
 }
 
+@mixin loadingAnim($offsetX,$nbDots){
+    @for $i from 0 to $nbDots+1{
+        @if $i < $nbDots +1{
+            &:nth-child(#{$i+1}){
+                @debug "item " + $i;
+                //animation-delay: 2s;
+                animation: loadingDots3 2s ease-in-out $i * .5s forwards infinite;
+            }
+        }
+        @else if $i == $nbDots{
+            @debug "last";
+        }
+    }
+    @keyframes loadingDots {
+        0%{
+            // Init
+            transform: translate(0, 0);
+            z-index: 0;
+        }
+        25%{
+            // Move --> 
+            transform: translate($offsetX, 0);
+        }
+        50%{
+            // Move -->
+            transform: scale(1) translate($offsetX*2, 0);
+        }
+        75%{
+            // Scale out
+            transform: scale(0) translate($offsetX, 0) ;
+            z-index: -1;
+        }
+        100%{
+            transform:scale(1);
+        }
+    }
+
+    @keyframes loadingDots2 {
+        0%{
+            // Init
+            transform: translate(0, 0);
+            z-index: 0;
+        }
+        33%{
+            // Move --> 
+            transform: translate($offsetX, 0);
+        }
+        66%{
+            // Move -->
+            transform:translate($offsetX*2, 0);
+        }
+        100%{
+            // Scale out
+            transform:translate($offsetX*2, 0, 0) ;
+            z-index: -1;
+        }
+    }
+
+    @keyframes loadingDots3 {
+        0%{
+            // Init
+            transform: translate(0, 0);
+            z-index: 0;
+        }
+        50%{
+            // Move --> 
+            transform: translate($offsetX*2, 0);
+        }
+        
+        100%{
+            // Scale out
+            transform:translate($offsetX*4, 0, 0) ;
+            z-index: -1;
+        }
+    }
+    // @for $i from 0 to $nbDots+1{
+    //     // First dot
+    //     @if $i == 0{
+    //         &:nth-child(#{$i+1}){
+    //             @debug "First item";
+    //         }
+    //     }
+    //     // Last dot
+    //     @else if $i == $nbDots{
+    //         @debug "Last item";
+    //     }
+    //     // In between dots
+    //     @else{
+    //         @debug "Middle item";
+    //     }
+    // }
+}
+
 @keyframes rotationAnim {
     0%{
         transform: rotate(0);
@@ -26,17 +119,3 @@
         transform: rotate(360deg);
     }
 }
-
-/*
-@mixin confirmBtAnim(){
-
-    @keyframes revealBtAnim {
-        0%{
-            width: 10%;
-        }
-        100%{
-            width: 35%;
-        }
-    }
-}
-*/
