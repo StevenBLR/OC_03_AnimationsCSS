@@ -468,18 +468,15 @@ footer .footer__link i {
 }
 .loading .lds-ellipsis div:nth-child(1) {
   opacity: 1;
-  animation: loadingDots3 2s ease-in-out 1.5s forwards, scaleIn 1s ease-in-out 1.5s;
-  animation-iteration-count: infinite, 0;
+  animation: scaleIn 1s ease-in-out 1s forwards, loadingDots3 2s ease-in-out 2s forwards infinite;
 }
 .loading .lds-ellipsis div:nth-child(2) {
   opacity: 1;
-  animation: loadingDots3 2s ease-in-out 2s forwards, scaleIn 1s ease-in-out 2s;
-  animation-iteration-count: infinite, 0;
+  animation: scaleIn 1s ease-in-out 1.6s forwards, loadingDots3 2s ease-in-out 2.5s forwards infinite;
 }
 .loading .lds-ellipsis div:nth-child(3) {
   opacity: 1;
-  animation: loadingDots3 2s ease-in-out 2.5s forwards, scaleIn 1s ease-in-out 2.5s;
-  animation-iteration-count: infinite, 0;
+  animation: scaleIn 1s ease-in-out 2.2s forwards, loadingDots3 2s ease-in-out 3s forwards infinite;
 }
 @keyframes loadingDots {
   0% {
