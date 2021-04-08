@@ -18,13 +18,28 @@
     }
 }
 
+@mixin logoHideOut() {
+    //animation-delay: 5s;
+    //animation: logoHideOut 1.5s cubic-bezier(.17,.67,.33,.99) .5s backwards;
+    animation: logoHideOut 1.5s cubic-bezier(0,.71,0,1.01) .5s backwards,logoHideOut .5s cubic-bezier(0,.50,0,.8) 4.5s forwards reverse;
+    @keyframes logoHideOut {
+        0%{
+            transform: translateY(200px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+}
+
 @mixin loadingAnim($offsetX,$nbDots){
     @for $i from 0 to $nbDots+1{
         @if $i < $nbDots +1{
             &:nth-child(#{$i+1}){
+                opacity: 1;
                 @debug "item " + $i;
-                //animation-delay: 2s;
-                animation: loadingDots3 2s ease-in-out $i * .5s forwards infinite;
+                animation: loadingDots3 2s ease-in-out $i * .5s + 1.5s forwards, scaleIn 1s ease-in-out $i * .5s + 1.5s;
+                animation-iteration-count: infinite, 0;
             }
         }
         @else if $i == $nbDots{
@@ -81,6 +96,7 @@
     @keyframes loadingDots3 {
         0%{
             // Init
+            opacity: 1;
             transform: translate(0, 0);
             z-index: 0;
         }
@@ -91,23 +107,22 @@
         
         100%{
             // Scale out
-            transform:translate($offsetX*4, 0, 0) ;
+            transform:translate(0, 0) ;
+            opacity: 1;
             z-index: -1;
         }
     }
 /*#endregion*/
 }
 
-@mixin logoHideOut() {
-    //animation-delay: 5s;
-    //animation: logoHideOut 1.5s cubic-bezier(.17,.67,.33,.99) 1s backwards;
-    animation: logoHideOut 1.5s cubic-bezier(0,.45,0,1.32) .5s backwards;
-    @keyframes logoHideOut {
+@mixin fadeOut($delay,$duration){
+    animation: fadeOut $duration ease-in-out $delay forwards;
+    @keyframes fadeOut {
         0%{
-            transform: translateY(100px);
-        }
+            opacity: 1;
+        }    
         100%{
-            transform: translateY(0px);
+            opacity: 0;
         }
     }
 }
@@ -118,6 +133,17 @@
     }    
     100%{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleIn{
+    0%{
+        opacity: 1;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
     }
 }
 

@@ -1,7 +1,6 @@
 @import "../04_Composants/animations"; 
 
 .loading{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,19 +11,33 @@
     height: 100%;
     z-index: 1;
     content: "";
+    @include fadeOut(5s,1s);
     background-color: white;
     .loading__titleBox{
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 10rem;
+      
       //background-color: aquamarine;
       overflow: hidden;
+      // &::after{
+      //   display: block;
+      //   content: "";
+      //   width: 100%;
+      //   height: 0.5rem;
+      //   position: absolute;
+      //   bottom: 0;
+      //   background-color: $tertiaryColor;
+      // }
       .loading__logo{
         @include logoHideOut();
         position: absolute;
         width: 100%;
         height: 6rem;
-        bottom: 0px;
+        bottom: 30px;
       }
     }
     
@@ -47,16 +60,25 @@
         @include loadingAnim(3rem,2);
       }
       .lds-ellipsis div:nth-child(1) {
+        //display: none;
+        //visibility: hidden;
+        opacity: 0.01;
         background: #99E2D0;
         //left: 8px;
         //animation: lds-ellipsis1 0.6s infinite;
       }
       .lds-ellipsis div:nth-child(2) {
+        //display: none;
+        //visibility: hidden;
+        opacity: 0.01;
         background: #9356DC;
         //left: 8px;
         //animation: lds-ellipsis2 0.6s infinite;
       }
       .lds-ellipsis div:nth-child(3) {
+        //display: none;
+        //visibility: hidden;
+        opacity: 0.01;
         background: #FF79DA;
         //left: 32px;
         //animation: lds-ellipsis2 0.6s infinite;
