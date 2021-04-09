@@ -75,7 +75,7 @@
         .menu__meal{
             /* Animation */
             opacity: 0;
-            @include staggerAnim(12);
+            @include staggerAnim(20);
 
             display: flex;
             flex-direction: row;
