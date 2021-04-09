@@ -416,7 +416,7 @@ footer .footer__link i {
   height: 100%;
   z-index: 1;
   content: "";
-  animation: fadeOut 1s ease-in-out 5s forwards;
+  animation: fadeOut 1s ease-in-out 5.8s forwards;
   background-color: white;
 }
 @keyframes fadeOut {
@@ -437,7 +437,7 @@ footer .footer__link i {
   overflow: hidden;
 }
 .loading .loading__titleBox .loading__logo {
-  animation: logoHideOut 1.5s cubic-bezier(0, 0.71, 0, 1.01) 0.5s backwards, logoHideOut 0.5s cubic-bezier(0, 0.5, 0, 0.8) 4.5s forwards reverse;
+  animation: logoHideOut 1.5s cubic-bezier(0, 0.71, 0, 1.01) 0.5s backwards, logoHideOut 0.5s cubic-bezier(0, 0.5, 0, 0.8) 5.5s forwards reverse;
   position: absolute;
   width: 100%;
   height: 6rem;
@@ -452,9 +452,11 @@ footer .footer__link i {
   }
 }
 .loading .lds-ellipsis {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   position: relative;
-  width: 80px;
+  overflow: hidden;
+  width: 200px;
   height: 80px;
 }
 .loading .lds-ellipsis div {
@@ -468,15 +470,15 @@ footer .footer__link i {
 }
 .loading .lds-ellipsis div:nth-child(1) {
   opacity: 1;
-  animation: scaleIn 1s ease-in-out 1s forwards, loadingDots3 2s ease-in-out 2s forwards infinite;
+  animation: scaleIn 1s ease-in-out 1s forwards normal, loadingDots3 2s ease-in-out 2s forwards 1, scaleIn 1s ease-in-out 4s reverse forwards;
 }
 .loading .lds-ellipsis div:nth-child(2) {
   opacity: 1;
-  animation: scaleIn 1s ease-in-out 1.6s forwards, loadingDots3 2s ease-in-out 2.5s forwards infinite;
+  animation: scaleIn 1s ease-in-out 1.5s forwards normal, loadingDots3 2s ease-in-out 2.5s forwards 1, scaleIn 1s ease-in-out 4.5s reverse forwards;
 }
 .loading .lds-ellipsis div:nth-child(3) {
   opacity: 1;
-  animation: scaleIn 1s ease-in-out 2.2s forwards, loadingDots3 2s ease-in-out 3s forwards infinite;
+  animation: scaleIn 1s ease-in-out 2s forwards normal, loadingDots3 2s ease-in-out 3s forwards 1, scaleIn 1s ease-in-out 5s reverse forwards;
 }
 @keyframes loadingDots {
   0% {
@@ -484,13 +486,13 @@ footer .footer__link i {
     z-index: 0;
   }
   25% {
-    transform: translate(3rem, 0);
+    transform: translate(2rem, 0);
   }
   50% {
-    transform: scale(1) translate(6rem, 0);
+    transform: scale(1) translate(4rem, 0);
   }
   75% {
-    transform: scale(0) translate(3rem, 0);
+    transform: scale(0) translate(2rem, 0);
     z-index: -1;
   }
   100% {
@@ -503,28 +505,35 @@ footer .footer__link i {
     z-index: 0;
   }
   33% {
-    transform: translate(3rem, 0);
+    transform: translate(2rem, 0);
   }
   66% {
-    transform: translate(6rem, 0);
+    transform: translate(4rem, 0);
   }
   100% {
-    transform: translate(6rem, 0, 0);
+    transform: translate(4rem, 0, 0);
     z-index: -1;
   }
 }
 @keyframes loadingDots3 {
   0% {
-    opacity: 1;
     transform: translate(0, 0);
     z-index: 0;
   }
+  25% {
+    transform: translate(4rem, 0);
+    z-index: 0;
+  }
   50% {
-    transform: translate(6rem, 0);
+    transform: translate(0, 0);
+    z-index: -1;
+  }
+  75% {
+    transform: translate(-4rem, 0);
+    z-index: 0;
   }
   100% {
     transform: translate(0, 0);
-    opacity: 1;
     z-index: -1;
   }
 }

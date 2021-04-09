@@ -18,10 +18,10 @@
     }
 }
 
-@mixin logoHideOut() {
+@mixin logoHideOut($delay) {
     //animation-delay: 5s;
     //animation: logoHideOut 1.5s cubic-bezier(.17,.67,.33,.99) .5s backwards;
-    animation: logoHideOut 1.5s cubic-bezier(0,.71,0,1.01) .5s backwards,logoHideOut .5s cubic-bezier(0,.50,0,.8) 4.5s forwards reverse;
+    animation: logoHideOut 1.5s cubic-bezier(0,.71,0,1.01) .5s backwards,logoHideOut .5s cubic-bezier(0,.50,0,.8) $delay forwards reverse;
     @keyframes logoHideOut {
         0%{
             transform: translateY(200px);
@@ -34,16 +34,11 @@
 
 @mixin loadingAnim($offsetX,$nbDots){
     @for $i from 0 to $nbDots+1{
-        @if $i < $nbDots +1{
-            &:nth-child(#{$i+1}){
-                opacity: 1;
-                @debug "item " + $i;
-                animation: scaleIn 1s ease-in-out $i * .6s + 1s forwards, loadingDots3 2s ease-in-out $i * .5s + 2s forwards infinite;
-                //animation-iteration-count: infinite, 0;
-            }
-        }
-        @else if $i == $nbDots{
-            @debug "last";
+        &:nth-child(#{$i+1}){
+            opacity: 1;
+            @debug "item " + $i;
+            animation: scaleIn 1s ease-in-out $i * .5s + 1s forwards normal, loadingDots3 2s ease-in-out $i * .5s + 2s forwards 1, scaleIn 1s ease-in-out $i * .5s + 4s reverse forwards;
+            //animation-iteration-count: infinite, 0;
         }
     }
     
@@ -96,19 +91,27 @@
     @keyframes loadingDots3 {
         0%{
             // Init
-            opacity: 1;
             transform: translate(0, 0);
+            z-index: 0;
+        }
+        25%{
+            // Move --> 
+            transform: translate($offsetX*2, 0);
             z-index: 0;
         }
         50%{
             // Move --> 
-            transform: translate($offsetX*2, 0);
+            transform: translate(0, 0);
+            z-index: -1;
         }
-        
+        75%{
+            // Move --> 
+            transform: translate(-$offsetX*2, 0);
+            z-index: 0;
+        }
         100%{
-            // Scale out
-            transform:translate(0, 0) ;
-            opacity: 1;
+            // Move --> 
+            transform: translate(0, 0);
             z-index: -1;
         }
     }
