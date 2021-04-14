@@ -3,7 +3,6 @@ const loadingElt = document.querySelector(".loading");
 function HideElt(elt, delay){
     setTimeout(function(){
         elt.style.display = "none";
-        console.log("Test");
     }, delay);
 }
 
