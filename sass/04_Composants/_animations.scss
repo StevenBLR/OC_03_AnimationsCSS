@@ -18,6 +18,18 @@
     }
 }
 
+@mixin HideElt($delay){
+    animation: hide 1s step-end $delay forwards;
+    @keyframes hide{
+        0%{
+            z-index: 1;
+        }
+        100%{
+            z-index: -5;
+        }
+    }
+}
+
 @mixin logoHideOut($delay) {
     //animation-delay: 5s;
     //animation: logoHideOut 1.5s cubic-bezier(.17,.67,.33,.99) .5s backwards;
@@ -164,3 +176,4 @@
         transform: scale( 1 );
     }
 }
+
