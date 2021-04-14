@@ -46,6 +46,7 @@
         //visibility: hidden; // is Disabling toggle //
         &:checked ~ .like{
             font-weight: 600;
+            animation: heartbeat 1s;
         }
         &:not(:checked) ~ .like{
             font-weight: 400;

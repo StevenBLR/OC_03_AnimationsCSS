@@ -1,20 +1,6 @@
 @import "../04_Composants/buttons";
+@import "../04_Composants/animations"; 
 
-@mixin staggerAnim($nb) {
-    $elements:$nb;
-    $delay:0.5;
-    @for $i from 0 to $elements {
-        &:nth-child(#{$i + 1}) {
-            //background: rgb($i*30, $i*20, $i*30);
-            transition-delay: 1s;
-            transform: translateY(-5rem);
-            transition-delay: $i * 0.05s;
-            //opacity: 0;
-        }
-        transition: transform 1000ms cubic-bezier(.17,.67,.33,.99);
-        //animation: fade-in 330ms ease forwards;
-    }
-}
 .menu{
     position: relative;
     display: flex;
@@ -88,41 +74,24 @@
         }
         .menu__meal{
             /* Animation */
-            //opacity: 0;
-            
-            // &:hover{
-            //     transform: translateY(2rem);
-            // }
-            @include staggerAnim(12);
-            
-            
+            opacity: 0;
+            @include staggerAnim(20);
 
-            // $elements:12;
-            // @for $i from 0 to $elements {
-            //     &:nth-child(#{$i + 1}) {
-            //         background: rgb($i*10, $i*10, $i*10);
-            //         @debug "VALUE: #{nth-child($i)}";
-            //     }
-            // }
-                // opacity: 0;
-                // animation: fade-in 300ms ease forwards;
-              
-                // @for $x from 2 through $n {
-                //   &:nth-child(#{$x}) {
-                //     animation-delay: 100ms * ($x - 1);
-                //   }
-                // }
             display: flex;
             flex-direction: row;
             position: relative;
             margin: 1rem 2rem 1rem 2rem;
             padding: 2em;
-            bottom: -5rem;
+            overflow: hidden;
             border-radius: 3em;
             box-shadow: 3px 3px 11px -3px gray;
             background-color: white;
+
             .menu__info{
-                flex:1 1 auto;
+                flex: 1 1 auto;
+                text-overflow: ellipsis;
+                width: 100px;
+                overflow: hidden;
             }
             .menu__price{
                 align-self: flex-end;
@@ -131,30 +100,48 @@
                 height: 100%;
                 width: 5em;
             }
-            .menu__selected{
+            .menu__offset{
                 display: flex;
                 position: relative;
                 justify-content: center;
                 align-items: center;
-                width: 9rem;    // Edit to update UI
-                color: white;
+                width: 0;    // Edit to update UI
                 border-radius: 0 2rem 2rem 0;
-                background-color: pink;
+                transition: .35s cubic-bezier(.5,.01,.55,1);
+                //background-color: pink;
+                
+                
+            }
+            .restaurant__mealBt{
+                width: 10%;
+                transition: .35s cubic-bezier(.5,.01,.55,1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                content: "";
+                z-index: 0;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: -12%;
+                color: white;
+                background-color: #99E2D0;
                 i{
                     z-index: 1;
                 }
-                &::after{
-                    display: block;
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 11rem;
-                    right: -2em;
-                    border-radius: 0 3rem 3rem 0;
-                    background-color: $tertiaryColor;
-                    opacity: 0.5;
-                }
             }
+
+            &:hover .restaurant__mealBt{
+                width: 22%;
+                transform: translate(-6.5rem, 0);
+            }
+            &:hover .menu__offset{
+                width: 22%;
+            }
+            &:hover .restaurant__mealBt i{
+                animation: rotationAnim .42s ease-in-out;
+            } 
+            
         }
     }
     .gradientBt{

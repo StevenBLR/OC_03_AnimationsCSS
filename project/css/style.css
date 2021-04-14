@@ -95,6 +95,7 @@ h4 {
   position: relative;
   display: flex;
   justify-content: center;
+  top: -1px;
   box-shadow: 3px 3px 11px -3px gray;
   background-color: white;
 }
@@ -157,6 +158,35 @@ footer .footer__link i {
   color: black;
 }
 
+@keyframes rotationAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .menu {
   position: relative;
   display: flex;
@@ -206,6 +236,7 @@ footer .footer__link i {
 }
 .menu .menu__header .menu__like .likeSwitch:checked ~ .like {
   font-weight: 600;
+  animation: heartbeat 1s;
 }
 .menu .menu__header .menu__like .likeSwitch:not(:checked) ~ .like {
   font-weight: 400;
@@ -255,102 +286,92 @@ footer .footer__link i {
 }
 .menu .menu__board .menu__meal {
   /* Animation */
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
-  transition: transform 1000ms cubic-bezier(0.17, 0.67, 0.33, 0.99);
-  animation: fade-in 330ms ease forwards;
+  opacity: 0;
   display: flex;
   flex-direction: row;
   position: relative;
   margin: 1rem 2rem 1rem 2rem;
   padding: 2em;
-  bottom: -5rem;
+  overflow: hidden;
   border-radius: 3em;
   box-shadow: 3px 3px 11px -3px gray;
   background-color: white;
 }
 .menu .menu__board .menu__meal:nth-child(1) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(2) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.05s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.1s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(3) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.1s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.2s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(4) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.15s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.3s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(5) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.2s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.4s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(6) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.25s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.5s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(7) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.3s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.6s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(8) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.35s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.7s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(9) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.4s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.8s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(10) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.45s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 0.9s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(11) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.5s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1s forwards;
 }
 .menu .menu__board .menu__meal:nth-child(12) {
-  transition-delay: 1s;
-  transform: translateY(-5rem);
-  transition-delay: 0.55s;
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.1s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(13) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.2s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(14) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.3s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(15) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.4s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(16) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.5s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(17) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.6s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(18) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.7s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(19) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.8s forwards;
+}
+.menu .menu__board .menu__meal:nth-child(20) {
+  animation: staggerAnimation 1500ms cubic-bezier(0.17, 0.67, 0.33, 0.99) 1.9s forwards;
+}
+@keyframes staggerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }
 .menu .menu__board .menu__meal .menu__info {
   flex: 1 1 auto;
+  text-overflow: ellipsis;
+  width: 100px;
+  overflow: hidden;
 }
 .menu .menu__board .menu__meal .menu__price {
   align-self: flex-end;
@@ -359,34 +380,221 @@ footer .footer__link i {
   height: 100%;
   width: 5em;
 }
-.menu .menu__board .menu__meal .menu__selected {
+.menu .menu__board .menu__meal .menu__offset {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 9rem;
-  color: white;
+  width: 0;
   border-radius: 0 2rem 2rem 0;
-  background-color: pink;
+  transition: 0.35s cubic-bezier(0.5, 0.01, 0.55, 1);
 }
-.menu .menu__board .menu__meal .menu__selected i {
+.menu .menu__board .menu__meal .restaurant__mealBt {
+  width: 10%;
+  transition: 0.35s cubic-bezier(0.5, 0.01, 0.55, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "";
+  z-index: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -12%;
+  color: white;
+  background-color: #99E2D0;
+}
+.menu .menu__board .menu__meal .restaurant__mealBt i {
   z-index: 1;
 }
-.menu .menu__board .menu__meal .menu__selected::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 11rem;
-  right: -2em;
-  border-radius: 0 3rem 3rem 0;
-  background-color: #99E2D0;
-  opacity: 0.5;
+.menu .menu__board .menu__meal:hover .restaurant__mealBt {
+  width: 22%;
+  transform: translate(-6.5rem, 0);
+}
+.menu .menu__board .menu__meal:hover .menu__offset {
+  width: 22%;
+}
+.menu .menu__board .menu__meal:hover .restaurant__mealBt i {
+  animation: rotationAnim 0.42s ease-in-out;
 }
 .menu .gradientBt {
   padding: 3rem 8rem 3rem 8rem;
   position: absolute;
   bottom: 0;
+}
+
+@keyframes rotationAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  content: "";
+  animation: fadeOut 1s ease-in-out 5.8s forwards;
+  background-color: white;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loading .loading__titleBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+}
+.loading .loading__titleBox .loading__logo {
+  animation: logoHideOut 1.5s cubic-bezier(0, 0.71, 0, 1.01) 0.5s backwards, logoHideOut 0.5s cubic-bezier(0, 0.5, 0, 0.8) 5.5s forwards reverse;
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  bottom: 30px;
+}
+@keyframes logoHideOut {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.loading .lds-ellipsis {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 80px;
+}
+.loading .lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /*#region Loading spinner anim */
+  /*#endregion*/
+}
+.loading .lds-ellipsis div:nth-child(1) {
+  opacity: 1;
+  animation: scaleIn 1s ease-in-out 1s forwards normal, loadingDots3 2s ease-in-out 2s forwards 1, scaleIn 1s ease-in-out 4s reverse forwards;
+}
+.loading .lds-ellipsis div:nth-child(2) {
+  opacity: 1;
+  animation: scaleIn 1s ease-in-out 1.5s forwards normal, loadingDots3 2s ease-in-out 2.5s forwards 1, scaleIn 1s ease-in-out 4.5s reverse forwards;
+}
+.loading .lds-ellipsis div:nth-child(3) {
+  opacity: 1;
+  animation: scaleIn 1s ease-in-out 2s forwards normal, loadingDots3 2s ease-in-out 3s forwards 1, scaleIn 1s ease-in-out 5s reverse forwards;
+}
+@keyframes loadingDots {
+  0% {
+    transform: translate(0, 0);
+    z-index: 0;
+  }
+  25% {
+    transform: translate(2rem, 0);
+  }
+  50% {
+    transform: scale(1) translate(4rem, 0);
+  }
+  75% {
+    transform: scale(0) translate(2rem, 0);
+    z-index: -1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loadingDots2 {
+  0% {
+    transform: translate(0, 0);
+    z-index: 0;
+  }
+  33% {
+    transform: translate(2rem, 0);
+  }
+  66% {
+    transform: translate(4rem, 0);
+  }
+  100% {
+    transform: translate(4rem, 0, 0);
+    z-index: -1;
+  }
+}
+@keyframes loadingDots3 {
+  0% {
+    transform: translate(0, 0);
+    z-index: 0;
+  }
+  25% {
+    transform: translate(4rem, 0);
+    z-index: 0;
+  }
+  50% {
+    transform: translate(0, 0);
+    z-index: -1;
+  }
+  75% {
+    transform: translate(-4rem, 0);
+    z-index: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    z-index: -1;
+  }
+}
+.loading .lds-ellipsis div:nth-child(1) {
+  opacity: 0.01;
+  background: #99E2D0;
+}
+.loading .lds-ellipsis div:nth-child(2) {
+  opacity: 0.01;
+  background: #9356DC;
+}
+.loading .lds-ellipsis div:nth-child(3) {
+  opacity: 0.01;
+  background: #FF79DA;
 }
 
 .localisation {
@@ -606,10 +814,41 @@ footer .footer__link i {
 }
 .restaurants .restaurants__like .likeSwitch:checked ~ .like {
   font-weight: 600;
+  animation: heartbeat 1s;
 }
 .restaurants .restaurants__like .likeSwitch:not(:checked) ~ .like {
   font-weight: 400;
   color: black;
+}
+
+@keyframes rotationAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

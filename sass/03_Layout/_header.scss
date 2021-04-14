@@ -13,6 +13,7 @@
         position: relative;
         display: flex;
         justify-content: center;
+        top: -1px; // Fix glitchy line above header
         box-shadow: 3px 3px 11px -3px gray;
         background-color: white;
         .header__logo{
