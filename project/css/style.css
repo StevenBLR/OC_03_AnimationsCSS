@@ -225,6 +225,7 @@ footer .footer__link i {
   height: 100%;
   width: 9rem;
   bottom: 0.5em;
+  right: 0;
 }
 .menu .menu__header .menu__like .like {
   color: #9356DC;
