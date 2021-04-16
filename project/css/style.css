@@ -214,7 +214,9 @@ footer .footer__link i {
 }
 .menu .menu__header .menu__like {
   width: 12rem;
-  position: relative;
+  position: absolute;
+  right: 50px;
+  bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -751,6 +753,11 @@ footer .footer__link i {
   padding-bottom: 10rem;
   background-color: #f6f6f6;
 }
+.restaurants .like-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 .restaurants .restaurants__card {
   display: flex;
   flex-direction: column;
@@ -796,7 +803,9 @@ footer .footer__link i {
 }
 .restaurants .restaurants__like {
   width: 12rem;
-  position: relative;
+  position: absolute;
+  right: 50px;
+  bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

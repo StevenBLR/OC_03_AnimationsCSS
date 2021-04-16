@@ -8,8 +8,11 @@
     .restaurants__title{
         @extend .sideTitleMargin;
     }
-
-    
+    .like-wrapper{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
     .restaurants__card{
         display: flex;
         flex-direction: column;
