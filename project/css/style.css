@@ -699,7 +699,6 @@ footer .footer__link i {
 }
 .steps .steps__stepBox {
   display: flex;
-  justify-content: row;
   align-items: center;
   box-sizing: border-box;
   height: 12rem;
@@ -726,12 +725,6 @@ footer .footer__link i {
   text-align: center;
   font-size: 2.3rem;
 }
-.steps .selected {
-  background-color: #f2eafb;
-}
-.steps .selected i {
-  color: white;
-}
 .steps .steps__stepBox i {
   color: #7f7f7f;
   width: 4rem;
@@ -743,6 +736,12 @@ footer .footer__link i {
   margin-right: 4rem;
   flex: 1 1 auto;
   color: black;
+}
+.steps #selected {
+  background-color: #f2eafb;
+}
+.steps #selected i {
+  color: #9356DC;
 }
 
 .restaurants {

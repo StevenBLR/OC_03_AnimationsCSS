@@ -10,7 +10,6 @@
     }
     .steps__stepBox{
         display: flex;
-        justify-content: row;
         align-items: center;
         box-sizing: border-box;
         height: 12rem;
@@ -37,12 +36,7 @@
                 text-align: center;
                 font-size: 2.3rem;
             }
-    .selected{
-        background-color: lighten($primaryColor,35%);
-        i{
-            color: white;
-        }
-    }
+    
     .steps__stepBox i{
         color: $grayIcons;
         width: 4rem;
@@ -55,5 +49,12 @@
         flex: 1 1 auto;
         color: black;
     }
+    #selected {
+        background-color: lighten($primaryColor,35%);
+        i{
+            color: $primaryColor;
+        }
+    }
 }
+
 
