@@ -89,7 +89,7 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-.header .header__logoArea {
+.header .header__logo-area {
   width: 100%;
   justify-self: stretch;
   position: relative;
@@ -99,7 +99,7 @@ h4 {
   box-shadow: 3px 3px 11px -3px gray;
   background-color: white;
 }
-.header .header__logoArea .header__logo {
+.header .header__logo-area .header__logo {
   margin: 2rem;
   margin-top: 3.5rem;
   height: 4rem;
@@ -128,7 +128,7 @@ footer .footer__link i {
   margin-right: 1rem;
 }
 
-.gradientBt {
+.gradient-bt {
   width: fit-content;
   height: fit-content;
   font-size: 2.5rem;
@@ -229,18 +229,18 @@ footer .footer__link i {
 .menu .menu__header .menu__like .like {
   color: #9356DC;
 }
-.menu .menu__header .menu__like .likeSwitch {
+.menu .menu__header .menu__like .like-switch {
   position: absolute;
   height: 100%;
   z-index: 1;
   width: 100%;
   opacity: 0;
 }
-.menu .menu__header .menu__like .likeSwitch:checked ~ .like {
+.menu .menu__header .menu__like .like-switch:checked ~ .like {
   font-weight: 600;
   animation: heartbeat 1s;
 }
-.menu .menu__header .menu__like .likeSwitch:not(:checked) ~ .like {
+.menu .menu__header .menu__like .like-switch:not(:checked) ~ .like {
   font-weight: 400;
   color: black;
 }
@@ -419,7 +419,7 @@ footer .footer__link i {
 .menu .menu__board .menu__meal:hover .restaurant__mealBt i {
   animation: rotationAnim 0.42s ease-in-out;
 }
-.menu .gradientBt {
+.menu .gradient-bt {
   padding: 3rem 8rem 3rem 8rem;
   position: absolute;
   bottom: 0;
@@ -476,7 +476,7 @@ footer .footer__link i {
     opacity: 0;
   }
 }
-.loading .loading__titleBox {
+.loading .loading__titlebox {
   position: relative;
   display: flex;
   align-items: center;
@@ -485,7 +485,7 @@ footer .footer__link i {
   height: 10rem;
   overflow: hidden;
 }
-.loading .loading__titleBox .loading__logo {
+.loading .loading__titlebox .loading__logo {
   animation: logoHideOut 1.5s cubic-bezier(0, 0.71, 0, 1.01) 0.5s backwards, logoHideOut 0.5s cubic-bezier(0, 0.5, 0, 0.8) 5.5s forwards reverse;
   position: absolute;
   width: 100%;
@@ -608,15 +608,15 @@ footer .footer__link i {
   z-index: -1;
   background-color: #eaeaea;
 }
-.localisation .localisation__inputArea {
+.localisation .localisation__input-area {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.localisation .localisation__inputArea .localisation i {
+.localisation .localisation__input-area .localisation i {
   margin: 2rem;
 }
-.localisation .localisation__inputArea .localisation__input {
+.localisation .localisation__input-area .localisation__input {
   padding: 1px 6px;
   margin: 1rem;
   font-size: 2.5rem;
@@ -628,12 +628,12 @@ footer .footer__link i {
   }
   */
 }
-.localisation .localisation__inputArea .localisation__input::placeholder {
+.localisation .localisation__input-area .localisation__input::placeholder {
   font-size: 2rem;
   color: #353535;
 }
 
-.gradientBt {
+.gradient-bt {
   width: fit-content;
   height: fit-content;
   font-size: 2.5rem;
@@ -677,7 +677,7 @@ footer .footer__link i {
   text-align: center;
   width: 75%;
 }
-.landing .landing__subTitle, .landing--menu .landing__subTitle {
+.landing .landing__sub-title, .landing--menu .landing__sub-title {
   text-align: center;
   font-weight: 300;
   font-size: 3rem;
@@ -699,7 +699,7 @@ footer .footer__link i {
   height: 60rem;
   margin: 0 0 10rem;
 }
-.steps .steps__stepBox {
+.steps .steps__stepbox {
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -710,7 +710,7 @@ footer .footer__link i {
   box-shadow: 3px 3px 11px -3px gray;
   background-color: #f6f6f6;
 }
-.steps .steps__bulletPoint {
+.steps .steps__bulletpoint {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
@@ -721,18 +721,18 @@ footer .footer__link i {
   height: 4.5rem;
   width: 4.5rem;
 }
-.steps .steps__bulletPoint p {
+.steps .steps__bulletpoint p {
   color: white;
   font-weight: 300;
   text-align: center;
   font-size: 2.3rem;
 }
-.steps .steps__stepBox i {
+.steps .steps__stepbox i {
   color: #7f7f7f;
   width: 4rem;
   margin: 4rem;
 }
-.steps .steps__bulletTxt {
+.steps .steps__bullet-txt {
   text-align: left;
   font-size: 2.5rem;
   margin-right: 4rem;
@@ -768,7 +768,7 @@ footer .footer__link i {
   margin: 1.5rem;
   height: 38rem;
 }
-.restaurants .restaurants__newLabel {
+.restaurants .restaurants__new-label {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -789,7 +789,7 @@ footer .footer__link i {
   width: 100%;
   height: 70%;
 }
-.restaurants .restaurants__infoArea {
+.restaurants .restaurants__info-area {
   flex: 1 1 auto;
   display: flex;
   border-radius: 0 0 3rem 3rem;
@@ -813,18 +813,18 @@ footer .footer__link i {
 .restaurants .restaurants__like .like {
   color: #9356DC;
 }
-.restaurants .restaurants__like .likeSwitch {
+.restaurants .restaurants__like .like-switch {
   position: absolute;
   height: 100%;
   z-index: 1;
   width: 100%;
   opacity: 0;
 }
-.restaurants .restaurants__like .likeSwitch:checked ~ .like {
+.restaurants .restaurants__like .like-switch:checked ~ .like {
   font-weight: 600;
   animation: heartbeat 1s;
 }
-.restaurants .restaurants__like .likeSwitch:not(:checked) ~ .like {
+.restaurants .restaurants__like .like-switch:not(:checked) ~ .like {
   font-weight: 400;
   color: black;
 }

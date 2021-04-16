@@ -13,7 +13,7 @@
     content: "";
     @include fadeOut(5.8s,1s);
     background-color: white;
-    .loading__titleBox{
+    .loading__titlebox{
       position: relative;
       display: flex;
       align-items: center;

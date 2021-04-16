@@ -8,7 +8,7 @@
     .steps__title{
         @extend .sideTitleMargin;
     }
-    .steps__stepBox{
+    .steps__stepbox{
         display: flex;
         align-items: center;
         box-sizing: border-box;
@@ -19,7 +19,7 @@
         box-shadow: 3px 3px 11px -3px gray;
         background-color: $lightGreyBg;
     }
-        .steps__bulletPoint{
+        .steps__bulletpoint{
             display: flex;
             flex-shrink: 0;
             justify-content: center;
@@ -30,19 +30,19 @@
             height: 4.5rem;
             width: 4.5rem;
         }
-            .steps__bulletPoint p{
+            .steps__bulletpoint p{
                 color: white;
                 font-weight: 300;
                 text-align: center;
                 font-size: 2.3rem;
             }
     
-    .steps__stepBox i{
+    .steps__stepbox i{
         color: $grayIcons;
         width: 4rem;
         margin: 4rem;
     }
-    .steps__bulletTxt{
+    .steps__bullet-txt{
         text-align: left;
         font-size: 2.5rem;
         margin-right: 4rem;
