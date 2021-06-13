@@ -473,8 +473,11 @@ footer .footer__link i {
   0% {
     opacity: 1;
   }
-  100% {
+  25% {
     opacity: 0;
+  }
+  100% {
+    z-index: -100;
   }
 }
 .loading .loading__titlebox {
