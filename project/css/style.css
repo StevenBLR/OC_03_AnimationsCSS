@@ -216,7 +216,7 @@ footer .footer__link i {
   width: 12rem;
   position: absolute;
   right: 50px;
-  bottom: 80px;
+  bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -757,6 +757,7 @@ footer .footer__link i {
 }
 .restaurants .like-wrapper {
   display: flex;
+  width: 100%;
   justify-content: center;
   position: relative;
 }
@@ -807,7 +808,7 @@ footer .footer__link i {
   width: 12rem;
   position: absolute;
   right: 50px;
-  bottom: 80px;
+  bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
