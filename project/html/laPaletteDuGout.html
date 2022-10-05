@@ -1,180 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>La palette du gout</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <title>La palette du gout</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <div class="header__logo-area">
-            <img class="header__logo" src="../imgs/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-            <a href="../html/index.html" class="backBt"><i class="fas fa-arrow-left fa-3x"></i></a>
-        </div>
+      <div class="header__logo-area">
+        <img
+          class="header__logo"
+          src="../imgs/logo/ohmyfood@2x.svg"
+          alt="logo ohmyfood"
+        />
+        <a href="../../index.html" class="backBt"
+          ><i class="fas fa-arrow-left fa-3x"></i
+        ></a>
+      </div>
     </header>
 
     <div class="landing--menu">
-        <img class="landing__img" src="../imgs/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="logo ohmyfood">
+      <img
+        class="landing__img"
+        src="../imgs/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        alt="logo ohmyfood"
+      />
     </div>
 
     <main class="menu">
-        <div class="menu__header">
-            <h1>La Palette du goût</h1>
-            <div class="menu__like">
-                <input type="checkbox" class="like-switch">
-                <i class="fas fa-heart fa-2x like"></i>
-            </div>
+      <div class="menu__header">
+        <h1>La Palette du goût</h1>
+        <div class="menu__like">
+          <input type="checkbox" class="like-switch" />
+          <i class="fas fa-heart fa-2x like"></i>
         </div>
-        <div class="menu__board">
-            <!-- 
+      </div>
+      <div class="menu__board">
+        <!-- 
             Mixin type plat
             Mixin plat (titre, soustitre, prix) -->
-            <h2>ENTRÉES</h2>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Fricassée d'escargot</h3>
-                    <h4>Au piment d'espelette</h4>
-                </div>
-                <div class="menu__price">
-                    <p>25€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <h4>Et ses copeaux de truffe noire</h4>
-                </div>
-                <div class="menu__price">
-                    <p>35€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Oeuf au plat</h3>
-                    <h4>Assaisonné à la truffe sur lit de caviar</h4>
-                </div>
-                <div class="menu__price">
-                    <p>35€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <h2>PLATS</h2>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Fricassée d'escargot</h3>
-                    <h4>Au piment d'espelette</h4>
-                </div>
-                <div class="menu__price">
-                    <p>25€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Filet de boeuf aux herbes</h3>
-                    <h4>Accompagné de sa ribambelle de légumes</h4>
-                </div>
-                <div class="menu__price">
-                    <p>40€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Parmentier de queue de boeuf</h3>
-                    <h4>À la truffe noire sur sa purée de panais</h4>
-                </div>
-                <div class="menu__price">
-                    <p>35€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <h2>DESSERTS</h2>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Paris-Brest</h3>
-                    <h4>Revisité</h4>
-                </div>
-                <div class="menu__price">
-                    <p>18€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Macaron au chocolat d'exception </h3>
-                    <h4>Et glace à la vanille de Madagascar</h4>
-                </div>
-                <div class="menu__price">
-                    <p>22€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
-            <div class="menu__meal">
-                <div class="menu__info">
-                    <h3>Mousse au chocolat</h3>
-                    <h4>Au piment d'Espelette et à la truffe noire</h4>
-                </div>
-                <div class="menu__price">
-                    <p>23€</p>
-                </div>
-                <div class="menu__offset"></div>
-                <div class="restaurant__mealBt">
-                    <i class="fas fa-check-circle fa-4x"></i>
-                </div>
-            </div>
+        <h2>ENTRÉES</h2>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Fricassée d'escargot</h3>
+            <h4>Au piment d'espelette</h4>
+          </div>
+          <div class="menu__price">
+            <p>25€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
         </div>
-        <a href="#" class="gradient-bt">
-            <span>Commander</span>
-        </a>
-        
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Foie gras de canard mi-cuit</h3>
+            <h4>Et ses copeaux de truffe noire</h4>
+          </div>
+          <div class="menu__price">
+            <p>35€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Oeuf au plat</h3>
+            <h4>Assaisonné à la truffe sur lit de caviar</h4>
+          </div>
+          <div class="menu__price">
+            <p>35€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <h2>PLATS</h2>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Fricassée d'escargot</h3>
+            <h4>Au piment d'espelette</h4>
+          </div>
+          <div class="menu__price">
+            <p>25€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Filet de boeuf aux herbes</h3>
+            <h4>Accompagné de sa ribambelle de légumes</h4>
+          </div>
+          <div class="menu__price">
+            <p>40€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Parmentier de queue de boeuf</h3>
+            <h4>À la truffe noire sur sa purée de panais</h4>
+          </div>
+          <div class="menu__price">
+            <p>35€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <h2>DESSERTS</h2>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Paris-Brest</h3>
+            <h4>Revisité</h4>
+          </div>
+          <div class="menu__price">
+            <p>18€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Macaron au chocolat d'exception</h3>
+            <h4>Et glace à la vanille de Madagascar</h4>
+          </div>
+          <div class="menu__price">
+            <p>22€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+        <div class="menu__meal">
+          <div class="menu__info">
+            <h3>Mousse au chocolat</h3>
+            <h4>Au piment d'Espelette et à la truffe noire</h4>
+          </div>
+          <div class="menu__price">
+            <p>23€</p>
+          </div>
+          <div class="menu__offset"></div>
+          <div class="restaurant__mealBt">
+            <i class="fas fa-check-circle fa-4x"></i>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="gradient-bt">
+        <span>Commander</span>
+      </a>
     </main>
-    
 
     <footer class="footer">
-        <img class="footer__logo" src="../imgs/logo/ohmyfood_white.png" alt="logo ohmyfood">
-        <nav>
-            <a href="#" class="footer__link">
-                <i class="fas fa-utensils"></i>
-                <p>Proposer un restaurant</p>
-            </a>
-            <a href="#" class="footer__link">
-                <i class="fas fa-hands-helping"></i>
-                <p>Devenir partenaire</p>
-            </a>
-            <a href="#" class="footer__link">Mentions légales</a>
-            <a href="mailto:webmaster@example.com" class="footer__link">Contact</a>
-        </nav>
+      <img
+        class="footer__logo"
+        src="../imgs/logo/ohmyfood_white.png"
+        alt="logo ohmyfood"
+      />
+      <nav>
+        <a href="#" class="footer__link">
+          <i class="fas fa-utensils"></i>
+          <p>Proposer un restaurant</p>
+        </a>
+        <a href="#" class="footer__link">
+          <i class="fas fa-hands-helping"></i>
+          <p>Devenir partenaire</p>
+        </a>
+        <a href="#" class="footer__link">Mentions légales</a>
+        <a href="mailto:webmaster@example.com" class="footer__link">Contact</a>
+      </nav>
     </footer>
-    <script src="https://kit.fontawesome.com/3dfad0cb79.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/3dfad0cb79.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
